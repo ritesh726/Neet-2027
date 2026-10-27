@@ -17,3 +17,12 @@ IMPORTANT SETUP:
 6. The countdown target is 2 May 2027 at 00:00 IST. This is the target date supplied by the project owner; check official NTA notices for the final exam schedule.
 7. The campus image is loaded from Wikimedia Commons and includes attribution; internet is needed for that image.
 8. This package is not deployed to Vercel. Upload/extract the full folder to the correct GitHub repository, then redeploy. Test sign-up, submission, local history and Supabase history before sharing the site.
+
+- pdf-to-cbt.html: PDF-to-CBT admin tool. Upload a question PDF and optional answer-key PDF, extract text with PDF.js, optionally OCR scanned pages, review/edit questions/options/answers, then download a generated CBT HTML file.
+
+PDF-TO-CBT NOTES:
+1. Open pdf-to-cbt.html from the deployed website. Internet is needed for PDF.js and optional Tesseract OCR.
+2. Upload the question PDF and, if separate, the answer-key PDF. Review every extracted question and answer before generating.
+3. This tool is a best-effort parser. It cannot guarantee exact extraction for all layouts; diagrams and images are not embedded in the generated CBT. Manually correct missing content and answer keys.
+4. Downloaded CBT files are not automatically pushed to GitHub. To make a new test available to all students, upload the downloaded HTML file to the repository, add a link to index.html, and redeploy Vercel. Drafts saved in LocalStorage exist only in that browser.
+5. The generated CBT uses the project's configured Supabase project/key for optional cloud result sync after student sign-in. Verify the project is yours and run supabase_setup.sql before use. Never expose a service_role key.
