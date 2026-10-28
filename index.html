@@ -1,4 +1,11 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#07152f"><title>Target AIIMS | Aim2AIIMS Rishikesh</title><style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#07152f">
+<title>Target AIIMS | Aim2AIIMS Rishikesh</title>
+<style>
 :root{--bg:#07152f;--panel:#101f42;--line:#243a68;--cyan:#53e0e5;--gold:#ffc857;--text:#f4f7ff;--muted:#aab8d6}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#17366b 0,#07152f 58%);color:var(--text);font-family:Arial,Helvetica,sans-serif;min-height:100vh}.wrap{max-width:1150px;margin:auto;padding:26px 18px 50px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.brand{font-weight:900;letter-spacing:.5px;color:var(--cyan);font-size:19px}.pill{border:1px solid #39588d;border-radius:99px;padding:8px 13px;color:#d5e4ff;font-size:12px}.hero{text-align:center;padding:50px 10px 35px}.eyebrow{color:var(--gold);font-size:13px;font-weight:bold;letter-spacing:3px}.hero h1{font-size:clamp(38px,7vw,70px);margin:14px 0;background:linear-gradient(90deg,#fff,#8be8ef);background-clip:text;color:transparent}.hero p{color:var(--muted);font-size:16px;line-height:1.7;margin:0 auto;max-width:680px}.brands{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:25px 0 4px}.brandtag{padding:10px 17px;border-radius:12px;background:#14264b;border:1px solid #2c477b;font-weight:bold}.sectionhead{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:25px 0 15px}.sectionhead h2{margin:0;font-size:24px}.sectionhead span{color:var(--muted);font-size:13px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:16px}.card{background:linear-gradient(145deg,rgba(21,42,82,.97),rgba(12,27,57,.98));border:1px solid var(--line);border-radius:18px;padding:22px;display:flex;flex-direction:column;min-height:210px;transition:.2s}.card:hover{transform:translateY(-4px);border-color:var(--cyan);box-shadow:0 14px 32px #0003}.badge{font-size:11px;letter-spacing:1px;color:var(--cyan);font-weight:bold}.card h3{font-size:21px;margin:13px 0 8px}.card p{color:var(--muted);font-size:13px;line-height:1.6;margin:0 0 20px}.btn{margin-top:auto;display:block;text-decoration:none;text-align:center;background:linear-gradient(90deg,#38d6dc,#85f0e4);color:#06203b;font-weight:900;border-radius:10px;padding:13px}.btn.alt{background:#1c315d;color:#e9f2ff;border:1px solid #3b578c}.foot{text-align:center;color:#8397bc;font-size:12px;margin-top:34px;line-height:1.7}
 .aiims-section{max-width:950px;margin:20px auto 30px;text-align:center}
 .aiims-photo{display:block;width:100%;height:clamp(220px,45vw,430px);object-fit:cover;object-position:center;border-radius:20px;border:1px solid #39588d;box-shadow:0 14px 38px #0005;background:#101f42}
@@ -14,7 +21,105 @@
 .countdown .message{color:#dbe8ff;font-size:13px;line-height:1.6;margin:16px 0 0}
 .student-link{display:inline-block;margin-top:12px;color:#53e0e5;text-decoration:none;border:1px solid #39588d;border-radius:9px;padding:9px 13px}
 @media(max-width:520px){.countdown{padding:15px}.timegrid{gap:6px}.timebox{padding:12px 3px}.timebox span{font-size:9px;letter-spacing:.5px}.aiims-photo{border-radius:14px}}
-</style></head><body><main class="wrap"><header class="top"><div class="brand">✦ AIM2AIIMSRISHIKESH</div><div class="pill">NEET 2027 • ONLINE TEST PORTAL</div></header><section class="hero"><div class="eyebrow">YOUR PREPARATION • YOUR TARGET</div><h1>TARGET AIIMS</h1><p>Practice tests and question banks for NEET 2027. Choose a BTS paper or open a question bank generator and begin your preparation.</p><div class="brands"><span class="brandtag">ALLEN</span><span class="brandtag">Aakash</span><span class="brandtag">PW</span><span class="brandtag">Newlight</span></div></section>
+
+/* CHAPTER-WISE TESTS */
+.chapter-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0 20px;
+}
+
+.chapter-controls input,
+.chapter-controls select {
+  flex: 1;
+  min-width: 150px;
+  padding: 13px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: #101f42;
+  color: var(--text);
+  font-size: 14px;
+  outline: none;
+}
+
+.chapter-controls input:focus,
+.chapter-controls select:focus {
+  border-color: var(--cyan);
+}
+
+.chapter-controls select option {
+  background: #101f42;
+  color: white;
+}
+
+.test-count {
+  color: var(--cyan);
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.chapter-card {
+  min-height: 190px;
+}
+
+.chapter-card .subject-badge {
+  display: inline-block;
+  width: fit-content;
+  padding: 6px 10px;
+  border-radius: 20px;
+  background: #1c315d;
+  color: var(--cyan);
+  font-size: 11px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.chapter-card h3 {
+  overflow-wrap: anywhere;
+}
+
+.no-tests {
+  display: none;
+  padding: 25px;
+  text-align: center;
+  color: var(--muted);
+  border: 1px dashed var(--line);
+  border-radius: 12px;
+}
+
+@media(max-width:520px) {
+  .chapter-controls {
+    flex-direction: column;
+  }
+
+  .chapter-controls input,
+  .chapter-controls select {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+<header class="top">
+  <div class="brand">✦ AIM2AIIMSRISHIKESH</div>
+  <div class="pill">NEET 2027 • ONLINE TEST PORTAL</div>
+</header>
+
+<section class="hero">
+  <div class="eyebrow">YOUR PREPARATION • YOUR TARGET</div>
+  <h1>TARGET AIIMS</h1>
+  <p>Practice tests and question banks for NEET 2027. Choose a BTS paper or open a question bank generator and begin your preparation.</p>
+  <div class="brands">
+    <span class="brandtag">ALLEN</span>
+    <span class="brandtag">Aakash</span>
+    <span class="brandtag">PW</span>
+    <span class="brandtag">Newlight</span>
+  </div>
+</section>
+
 <section class="aiims-section" aria-label="AIIMS Rishikesh">
   <img class="aiims-photo"
        src="https://upload.wikimedia.org/wikipedia/commons/d/dc/AIIMS_RISHIKESH_MEDICAL_COLLEGE.jpg"
@@ -24,6 +129,7 @@
   <p class="aiims-caption">All India Institute of Medical Sciences, Rishikesh<br>Photo: S V L N Prasad · <a href="https://commons.wikimedia.org/wiki/File:AIIMS_RISHIKESH_MEDICAL_COLLEGE.jpg" target="_blank" rel="noopener">CC BY-SA 4.0</a></p>
   <div class="dream-tag">🏥 YOUR DREAM • YOUR DESTINATION • AIIMS RISHIKESH</div>
 </section>
+
 <section class="countdown" aria-label="NEET UG 2027 countdown">
   <h2>⏳ NEET UG 2027 COUNTDOWN</h2>
   <div class="date">Target date: <strong>2 May 2027</strong></div>
@@ -35,8 +141,451 @@
   </div>
   <p class="message" id="cd-message">Every day counts. Stay consistent and keep practising!</p>
 </section>
-<div class="sectionhead"><h2>🛠️ Admin Tools</h2><span>Create and manage new tests</span></div><section class="grid"><article class="card"><div class="badge">ADMIN · PDF IMPORT</div><h3>PDF → Automatic CBT</h3><p>Upload a question PDF and optional answer-key PDF, review extracted questions, then generate a new CBT HTML file.</p><a class="btn alt" href="pdf-to-cbt.html">Open PDF-to-CBT Generator →</a></article></section>
-<div class="sectionhead"><h2>📝 BTS Test Series</h2><span>3 papers • Separate test pages</span></div><section class="grid"><article class="card"><div class="badge">BTS • TEST 01</div><h3>BTS-01</h3><p>NEET 2027 practice test · BTS paper 1</p><a class="btn" href="BTS-01_NEET_2027_CBT.html">Start Test →</a></article><article class="card"><div class="badge">BTS • TEST 02</div><h3>BTS-02</h3><p>NEET 2027 practice test · BTS paper 2</p><a class="btn" href="BTS-02_NEET_2027_CBT.html">Start Test →</a></article><article class="card"><div class="badge">BTS • TEST 03</div><h3>BTS-03</h3><p>NEET 2027 practice test · BTS paper 3</p><a class="btn" href="BTS-03_NEET_2027_CBT.html">Start Test →</a></article></section><div class="sectionhead"><h2>📚 Question Bank Generators</h2><span>Choose your question bank</span></div><section class="grid"><article class="card"><div class="badge">QUESTION BANK</div><h3>40K Custom Question Bank</h3><p>Open your existing 40K custom question bank generator.</p><a class="btn alt" href="NEET_40K_Custom_Question_Bank_Generator.html">Open Generator →</a></article><article class="card"><div class="badge">QUESTION BANK</div><h3>25,901 Questions</h3><p>NEET question bank with 25,901 questions.</p><a class="btn alt" href="NEET_Question_Bank_Generator_25901.html">Open Generator →</a></article></section><footer class="foot">BTS / Test Centre: <strong style="color:#dbe8ff">Aim2AIIMS Rishikesh</strong><br>Target AIIMS · NEET 2027 Preparation Portal<br><a class="student-link" href="student-dashboard.html">👤 Student Result History &amp; Comparison</a></footer></main><script>
+
+<div class="sectionhead"><h2>🛠️ Admin Tools</h2><span>Create and manage new tests</span></div>
+<section class="grid">
+  <article class="card">
+    <div class="badge">ADMIN · PDF IMPORT</div>
+    <h3>PDF → Automatic CBT</h3>
+    <p>Upload a question PDF and optional answer-key PDF, review extracted questions, then generate a new CBT HTML file.</p>
+    <a class="btn alt" href="pdf-to-cbt.html">Open PDF-to-CBT Generator →</a>
+  </article>
+</section>
+
+<div class="sectionhead"><h2>📝 BTS Test Series</h2><span>3 papers • Separate test pages</span></div>
+<section class="grid">
+  <article class="card">
+    <div class="badge">BTS • TEST 01</div>
+    <h3>BTS-01</h3>
+    <p>NEET 2027 practice test · BTS paper 1</p>
+    <a class="btn" href="BTS-01_NEET_2027_CBT.html">Start Test →</a>
+  </article>
+  <article class="card">
+    <div class="badge">BTS • TEST 02</div>
+    <h3>BTS-02</h3>
+    <p>NEET 2027 practice test · BTS paper 2</p>
+    <a class="btn" href="BTS-02_NEET_2027_CBT.html">Start Test →</a>
+  </article>
+  <article class="card">
+    <div class="badge">BTS • TEST 03</div>
+    <h3>BTS-03</h3>
+    <p>NEET 2027 practice test · BTS paper 3</p>
+    <a class="btn" href="BTS-03_NEET_2027_CBT.html">Start Test →</a>
+  </article>
+</section>
+
+<!-- CHAPTER-WISE TEST SERIES -->
+<div class="sectionhead" id="chapter-tests">
+  <h2>📚 Chapter-wise Tests</h2>
+  <span>Physics • Chemistry • Biology • FST</span>
+</div>
+
+<div class="chapter-controls">
+  <input
+    type="search"
+    id="testSearch"
+    placeholder="🔎 Search test or chapter..."
+    aria-label="Search tests"
+  >
+
+  <select id="subjectFilter" aria-label="Filter by subject">
+    <option value="all">All Subjects</option>
+    <option value="physics">Physics</option>
+    <option value="chemistry">Chemistry</option>
+    <option value="biology">Biology</option>
+    <option value="fst">FST Papers</option>
+  </select>
+</div>
+
+<div class="test-count" id="testCount">
+  Loading tests...
+</div>
+
+<section class="grid" id="chapterTestGrid">
+
+  <article class="card chapter-card" data-subject="physics">
+    <div class="badge">TEST 01</div>
+    <span class="subject-badge">Physics</span>
+    <h3>Basic Mathematics</h3>
+    <p>Physics: Basic Mathematics</p>
+    <a class="btn" href="tests/Test-1%20Physics%20Basic%20Mathematics_16-07-26.html">Start Test →</a>
+  </article>
+
+  <article class="card chapter-card" data-subject="chemistry">
+    <div class="badge">TEST 02</div>
+    <span class="subject-badge">Chemistry</span>
+    <h3>Mole Concept</h3>
+    <p>Chemistry: Mole Concept</p>
+    <a class="btn" href="tests/Test-2%20Chemistry_Mole%20Concept_16-07-26.html">Start Test →</a>
+  </article>
+
+  <article class="card chapter-card" data-subject="biology">
+    <div class="badge">TEST 03</div>
+    <span class="subject-badge">Biology</span>
+    <h3>The Living World</h3>
+    <p>Biology: The Living World</p>
+    <a class="btn" href="tests/Test-3-Biology_The%20Living%20World_18-07-26.html">Start Test →</a>
+  </article>
+
+  <article class="card chapter-card" data-subject="fst">
+    <div class="badge">TEST 04</div>
+    <span class="subject-badge">FST</span>
+    <h3>FST Paper</h3>
+    <p>Full Syllabus Test</p>
+    <a class="btn" href="tests/Test-4-FST%20Paper_19-07-26.html">Start Test →</a>
+  </article>
+
+  <article class="card chapter-card" data-subject="physics">
+    <div class="badge">TEST 05</div>
+    <span class="subject-badge">Physics</span>
+    <h3>Units, Dimensions & Error</h3>
+    <p>Physics: Units and Dimensions</p>
+    <a class="btn" href="tests/Test-5-Physics_U%20%20%20D%20%20%20Error_20-07-26.html">Start Test →</a>
+  </article>
+
+  <article class="card chapter-card" data-subject="chemistry">
+    <div class="badge">TEST 06</div>
+    <span class="subject-badge">Chemistry</span>
+    <h3>Atomic Structure</h3>
+    <p>Chemistry: Atomic Structure</p>
+    <a class="btn" href="tests/Test-6%20Chemistry_Atomic%20Structure_21-07-26.html">Start Test →</a>
+  </article>
+
+  <article class="card chapter-card" data-subject="biology">
+    <div class="badge">TEST 07</div>
+    <span class="subject-badge">Biology</span>
+    <h3>Biological Classification</h3>
+    <p>Biology: Biological Classification</p>
+    <a class="btn" href="tests/Test-7-Biology_Biological%20Classification_22-07-26.html">Start Test →</a>
+  </article>
+
+  <article class="card chapter-card" data-subject="physics">
+    <div class="badge">TEST 08</div>
+    <span class="subject-badge">Physics</span>
+    <h3>Motion in One Dimension</h3>
+    <p>Physics: 1-D Motion</p>
+    <a class="btn" href="tests/Test-8-Physics-1-D_23-07-26.html">Start Test →</a>
+  </article>
+
+  <article class="card chapter-card" data-subject="chemistry">
+    <div class="badge">TEST 09</div>
+    <span class="subject-badge">Chemistry</span>
+    <h3>Periodic Classification</h3>
+    <p>Chemistry: Periodic Classification of Elements</p>
+    <a class="btn" href="tests/Test_9_Chemistry_Periodic_Clasification_of_Elements_24_07_26.html">Start Test →</a>
+  </article>
+
+  <article class="card chapter-card" data-subject="biology">
+    <div class="badge">TEST 10</div>
+    <span class="subject-badge">Biology</span>
+    <h3>Plant Kingdom</h3>
+    <p>Biology: Plant Kingdom</p>
+    <a class="btn" href="tests/Test-10-Biology_Plant%20Kingdom_25-07-26.html">Start Test →</a>
+  </article>
+
+  <article class="card chapter-card" data-subject="fst">
+    <div class="badge">TEST 11</div>
+    <span class="subject-badge">FST</span>
+    <h3>FST Paper</h3>
+    <p>Full Syllabus Test</p>
+    <a class="btn" href="tests/Test-11%20-FST%20Paper_26-07-26.html">Start Test →</a>
+  </article>
+
+  <article class="card chapter-card" data-subject="physics">
+    <div class="badge">TEST 12</div>
+    <span class="subject-badge">Physics</span>
+    <h3>Vectors</h3>
+    <p>Physics: Vectors</p>
+    <a class="btn" href="tests/Test-12_Physics_Vectors_27-07-26.html">Start Test →</a>
+  </article>
+
+  <article class="card chapter-card" data-subject="chemistry">
+    <div class="badge">TEST 13</div>
+    <span class="subject-badge">Chemistry</span>
+    <h3>Chemical Bonding</h3>
+    <p>Chemistry: Chemical Bonding</p>
+    <a class="btn" href="tests/Test-13_Chemistry_Chemical%20Bonding_28-07-26.html">Start Test →</a>
+  </article>
+
+  <article class="card chapter-card" data-subject="physics">
+    <div class="badge">TEST 15</div>
+    <span class="subject-badge">Physics</span>
+    <h3>Projectile Motion</h3>
+    <p>Physics: Projectile Motion</p>
+    <a class="btn" href="tests/Test-15-Physics_Projectile%20Motion_30-07-26.html">Start Test →</a>
+  </article>
+
+  <article class="card chapter-card" data-subject="chemistry">
+    <div class="badge">TEST 16</div>
+    <span class="subject-badge">Chemistry</span>
+    <h3>Thermodynamics</h3>
+    <p>Chemistry: Thermodynamics</p>
+    <a class="btn" href="tests/Test-16_Chemistry_Thermodynamics_31-07-26.html">Start Test →</a>
+  </article>
+
+  <article class="card chapter-card" data-subject="biology">
+    <div class="badge">TEST 17</div>
+    <span class="subject-badge">Biology</span>
+    <h3>Morphology of Flowering Plants</h3>
+    <p>Biology: Morphology of Flowering Plants</p>
+    <a class="btn" href="tests/Test_17_Morphology%20of%20Flowering%20Plants_01-08-26.html">Start Test →</a>
+  </article>
+
+  <article class="card chapter-card" data-subject="fst">
+    <div class="badge">TEST 18</div>
+    <span class="subject-badge">FST</span>
+    <h3>PCB Paper</h3>
+    <p>Full Syllabus PCB Test</p>
+    <a class="btn" href="tests/Test%2018%20(FST)%20PCB%20Paper_02-08-26.html">Start Test →</a>
+  </article>
+
+  <article class="card chapter-card" data-subject="physics">
+    <div class="badge">TEST 19</div>
+    <span class="subject-badge">Physics</span>
+    <h3>Relative Motion</h3>
+    <p>Physics: Relative Motion</p>
+    <a class="btn" href="tests/Test-19%20Physics_Relative%20Motion_03-08-26.html">Start Test →</a>
+  </article>
+
+  <article class="card chapter-card" data-subject="chemistry">
+    <div class="badge">TEST 20</div>
+    <span class="subject-badge">Chemistry</span>
+    <h3>Chemical Equilibrium</h3>
+    <p>Chemistry: Equilibrium</p>
+    <a class="btn" href="tests/Test-20-Chemistry_Equilibrium_04-08-26.html">Start Test →</a>
+  </article>
+
+  <article class="card chapter-card" data-subject="biology">
+    <div class="badge">TEST 21</div>
+    <span class="subject-badge">Biology</span>
+    <h3>Anatomy of Flowering Plants</h3>
+    <p>Biology: Anatomy of Flowering Plants</p>
+    <a class="btn" href="tests/Test_21_Anatomy%20of%20Flowering%20Plants_05-08-26.html">Start Test →</a>
+  </article>
+
+  <article class="card chapter-card" data-subject="physics">
+    <div class="badge">TEST 22</div>
+    <span class="subject-badge">Physics</span>
+    <h3>Newton's Laws of Motion</h3>
+    <p>Physics: NLM</p>
+    <a class="btn" href="tests/Test-22_Physics-NLM_06-08-26.html">Start Test →</a>
+  </article>
+
+  <article class="card chapter-card" data-subject="chemistry">
+    <div class="badge">TEST 23</div>
+    <span class="subject-badge">Chemistry</span>
+    <h3>Redox Reactions</h3>
+    <p>Chemistry: Redox Reaction</p>
+    <a class="btn" href="tests/Test-23_Chemistry_Redox%20Reaction_07-08-26.html">Start Test →</a>
+  </article>
+
+  <article class="card chapter-card" data-subject="biology">
+    <div class="badge">TEST 24</div>
+    <span class="subject-badge">Biology</span>
+    <h3>Structural Organisation in Animals</h3>
+    <p>Biology: Structural Organisation in Animals</p>
+    <a class="btn" href="tests/Test-24_Biology_Structural%20Organisation%20in%20Animals-07-08-26.html">Start Test →</a>
+  </article>
+
+  <article class="card chapter-card" data-subject="fst">
+    <div class="badge">TEST 25</div>
+    <span class="subject-badge">FST</span>
+    <h3>FST Paper</h3>
+    <p>Full Syllabus Test</p>
+    <a class="btn" href="tests/Test-25%20(FST)%20Paper_09-08-26.html">Start Test →</a>
+  </article>
+
+  <article class="card chapter-card" data-subject="physics">
+    <div class="badge">TEST 26</div>
+    <span class="subject-badge">Physics</span>
+    <h3>Friction</h3>
+    <p>Physics: Friction</p>
+    <a class="btn" href="tests/Test_26_Physics_Friction-10-08-26.html">Start Test →</a>
+  </article>
+
+  <article class="card chapter-card" data-subject="chemistry">
+    <div class="badge">TEST 27</div>
+    <span class="subject-badge">Chemistry</span>
+    <h3>Purification and Estimation of Organic Compounds</h3>
+    <p>Chemistry: Organic Compound Estimation and Purification</p>
+    <a class="btn" href="tests/Test_27_Chemistry_Estimation_Purification_Of_Organic_Compound_.html">Start Test →</a>
+  </article>
+
+  <article class="card chapter-card" data-subject="biology">
+    <div class="badge">TEST 28</div>
+    <span class="subject-badge">Biology</span>
+    <h3>Cell: The Unit of Life</h3>
+    <p>Biology: Cell — The Unit of Life</p>
+    <a class="btn" href="tests/Test-28-Biology_Cell%20%20The%20Unit%20of%20Life-12-08-26.html">Start Test →</a>
+  </article>
+
+  <article class="card chapter-card" data-subject="physics">
+    <div class="badge">TEST 29</div>
+    <span class="subject-badge">Physics</span>
+    <h3>Work, Energy and Power</h3>
+    <p>Physics: WPE</p>
+    <a class="btn" href="tests/Test_29_Physics_WPE-13-08-26.html">Start Test →</a>
+  </article>
+
+  <article class="card chapter-card" data-subject="chemistry">
+    <div class="badge">TEST 30</div>
+    <span class="subject-badge">Chemistry</span>
+    <h3>p-Block Elements</h3>
+    <p>Chemistry: p-Block</p>
+    <a class="btn" href="tests/Test-30_Chemistry_p%20Block_14-08-26.html">Start Test →</a>
+  </article>
+
+  <article class="card chapter-card" data-subject="fst">
+    <div class="badge">TEST 31</div>
+    <span class="subject-badge">FST</span>
+    <h3>FST Paper</h3>
+    <p>Full Syllabus Test</p>
+    <a class="btn" href="tests/Test-31(FST)%20Paper-16-08-26.html">Start Test →</a>
+  </article>
+
+  <article class="card chapter-card" data-subject="biology">
+    <div class="badge">TEST 32</div>
+    <span class="subject-badge">Biology</span>
+    <h3>Biomolecules</h3>
+    <p>Biology: Biomolecules</p>
+    <a class="btn" href="tests/Test-32_Biology_Biomolecules_17-08-26.html">Start Test →</a>
+  </article>
+
+  <article class="card chapter-card" data-subject="physics">
+    <div class="badge">TEST 33</div>
+    <span class="subject-badge">Physics</span>
+    <h3>Circular Motion</h3>
+    <p>Physics: Circular Motion</p>
+    <a class="btn" href="tests/Test-33%20Physics_Circular%20Motion%2018-08-26.html">Start Test →</a>
+  </article>
+
+  <article class="card chapter-card" data-subject="chemistry">
+    <div class="badge">TEST 34</div>
+    <span class="subject-badge">Chemistry</span>
+    <h3>General Organic Chemistry (GOC)</h3>
+    <p>Chemistry: GOC</p>
+    <a class="btn" href="tests/Test-34%20Chemistry_GOC%2019-08-26.html">Start Test →</a>
+  </article>
+
+  <article class="card chapter-card" data-subject="biology">
+    <div class="badge">TEST 35</div>
+    <span class="subject-badge">Biology</span>
+    <h3>Cell Cycle and Cell Division</h3>
+    <p>Biology: Cell Cycle and Cell Division</p>
+    <a class="btn" href="tests/Test-35%20Biology_Cell%20Cycle%20%20%20Cell%20Division-20-08-26%20(1).html">Start Test →</a>
+  </article>
+
+  <article class="card chapter-card" data-subject="physics">
+    <div class="badge">TEST 36</div>
+    <span class="subject-badge">Physics</span>
+    <h3>Centre of Mass and Linear Momentum</h3>
+    <p>Physics: COM and Linear Momentum</p>
+    <a class="btn" href="tests/Test-36_Physics_COM,%20Linear%20Momentum_21-08-26.html">Start Test →</a>
+  </article>
+
+  <article class="card chapter-card" data-subject="chemistry">
+    <div class="badge">TEST 37</div>
+    <span class="subject-badge">Chemistry</span>
+    <h3>Hydrocarbons</h3>
+    <p>Chemistry: Hydrocarbon</p>
+    <a class="btn" href="tests/Test-37_Chemistry_Hydrocarbon_22-08-26.html">Start Test →</a>
+  </article>
+
+  <article class="card chapter-card" data-subject="fst">
+    <div class="badge">TEST 38</div>
+    <span class="subject-badge">FST</span>
+    <h3>FST Paper</h3>
+    <p>Full Syllabus Test</p>
+    <a class="btn" href="tests/Test-38(FST)%20Paper_23-08-26.html">Start Test →</a>
+  </article>
+
+  <article class="card chapter-card" data-subject="biology">
+    <div class="badge">TEST 39</div>
+    <span class="subject-badge">Biology</span>
+    <h3>Photosynthesis in Higher Plants</h3>
+    <p>Biology: Photosynthesis</p>
+    <a class="btn" href="tests/Test-39_Biology_Photosynthesis%20in%20Higher%20Plants_24-08-26.html">Start Test →</a>
+  </article>
+
+  <article class="card chapter-card" data-subject="physics">
+    <div class="badge">TEST 40</div>
+    <span class="subject-badge">Physics</span>
+    <h3>Rotational Motion</h3>
+    <p>Physics: Rotational Motion</p>
+    <a class="btn" href="tests/Test-40_Physics_Rotational%20Motion_25-08-26.html">Start Test →</a>
+  </article>
+
+</section>
+
+<div class="no-tests" id="noTests">
+  Koi test nahi mila. Search ya subject filter badal kar dekho.
+</div>
+
+<script>
+(function () {
+  const search = document.getElementById("testSearch");
+  const filter = document.getElementById("subjectFilter");
+  const cards = Array.from(
+    document.querySelectorAll("#chapterTestGrid .chapter-card")
+  );
+  const count = document.getElementById("testCount");
+  const empty = document.getElementById("noTests");
+
+  function applyFilters() {
+    const query = search.value.trim().toLowerCase();
+    const subject = filter.value;
+    let visible = 0;
+
+    cards.forEach(function (card) {
+      const text = card.textContent.toLowerCase();
+      const matchesText = text.includes(query);
+      const matchesSubject =
+        subject === "all" || card.dataset.subject === subject;
+
+      const show = matchesText && matchesSubject;
+      card.style.display = show ? "flex" : "none";
+
+      if (show) visible++;
+    });
+
+    count.textContent =
+      "Showing " + visible + " of " + cards.length + " available test files";
+
+    empty.style.display = visible === 0 ? "block" : "none";
+  }
+
+  search.addEventListener("input", applyFilters);
+  filter.addEventListener("change", applyFilters);
+
+  applyFilters();
+})();
+</script>
+
+<div class="sectionhead"><h2>📚 Question Bank Generators</h2><span>Choose your question bank</span></div>
+<section class="grid">
+  <article class="card">
+    <div class="badge">QUESTION BANK</div>
+    <h3>40K Custom Question Bank</h3>
+    <p>Open your existing 40K custom question bank generator.</p>
+    <a class="btn alt" href="NEET_40K_Custom_Question_Bank_Generator.html">Open Generator →</a>
+  </article>
+  <article class="card">
+    <div class="badge">QUESTION BANK</div>
+    <h3>25,901 Questions</h3>
+    <p>NEET question bank with 25,901 questions.</p>
+    <a class="btn alt" href="NEET_Question_Bank_Generator_25901.html">Open Generator →</a>
+  </article>
+</section>
+
+<footer class="foot">
+  BTS / Test Centre: <strong style="color:#dbe8ff">Aim2AIIMS Rishikesh</strong><br>
+  Target AIIMS · NEET 2027 Preparation Portal<br>
+  <a class="student-link" href="student-dashboard.html">👤 Student Result History &amp; Comparison</a>
+</footer>
+
+</main>
+
+<script>
 (function(){
  const target=new Date('2027-05-02T00:00:00+05:30').getTime();
  function tick(){
@@ -53,4 +602,5 @@
  tick();setInterval(tick,1000);
 })();
 </script>
-</body></html>
+</body>
+</html>
