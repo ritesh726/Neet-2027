@@ -24,3 +24,8 @@ Run `supabase_setup.sql` in the matching Supabase project's SQL Editor, then tes
 - PDF page images are stored once in the generated file and referenced by page number to avoid duplicating large image data for every question.
 - Admin preview supports checking the image selected for each question.
 - This is page-image capture, not perfect automatic diagram cropping: select the correct page or upload a crop for best results.
+
+
+## Result review improvement
+- Added a dedicated Incorrect & Unattempted Questions section to BTS-01/02/03 results, showing all options and marking the student's answer and correct answer.
+- Updated PDF-to-CBT generated tests to include the same focused review section for wrong and unattempted questions.
